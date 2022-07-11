@@ -16,7 +16,7 @@ tabs.forEach(tab => {
     ul.append(li);
 });
 nav.appendChild(ul);
-
+//test to push to github 
 function logFunc() {
     console.log(this.childNodes[0]);
 }
