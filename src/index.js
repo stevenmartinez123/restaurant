@@ -1,4 +1,6 @@
 import home from "./home";
+import '../src/css/reset.css'
+import '../src/css/styles.css';
 
 const content = document.getElementById('content');
 
