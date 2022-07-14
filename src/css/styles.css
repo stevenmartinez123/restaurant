@@ -1,26 +1,24 @@
+/*custom font for webpage, style similar to day of the dead*/
 @font-face {
     font-family: 'Skeleton';
     src: url('../fonts/ElSkeleto-ZVEGx.otf');
 }
 
-
+/*flex box added to navigation bar to have content on one line*/
 ul {
     display: flex;
     padding: 20px;
     justify-content: center;
 }
 
+/*adds skull wallpaper to webpage*/
 :root {
     background-image: url("../images/skull-background.jpg");
     background-repeat: repeat;
     font-family: 'Skeleton';
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
+/*teal background to nav, once scrolled nav will stick to top, orange bordering added*/
 nav {
     background-color: #66b2b2;
     position: sticky;
@@ -28,20 +26,21 @@ nav {
     border-top: 4px solid orange;
     border-bottom: 4px solid orange;
 }
-
+/*cursor pointed added to nav*/
 .tab {
     cursor: pointer;
     padding-right: 20px;
     font-size: 1.5rem;
 }
 
+/*places home, menu, and contact div in center of webpage*/
 #content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
+/*spacing for tab content from top of web page, 800px width*/
 .contentContainer {
     margin-top: 50px;
     display: flex;
@@ -50,6 +49,7 @@ nav {
     font-size: 2rem;
 }
 
+/*styling for all tabs, teal background color, orange border */
 .home, #contact-form, .menu, #followDiv {
     background-color: #66b2b2;
     border-radius: 20px;
@@ -58,33 +58,29 @@ nav {
     border: 4px solid orange;
 }
 
-#contact-form {
-    background-color: #66b2b2;
-}
-
+/*adds padding to heading in hours section of home tab*/
 #header-hours {
     padding-bottom: 20px;
     font-size: 2.5rem;
 }
 
+/*font size double for heading on reviews tab and all menu items*/
 #header-reviews, .menuItem {
     font-size: 2.5rem;
 }
 
-#header-home, #reviews-header, .menu-header {
+/*styling for home heading and menu heaging*/
+#header-home, .menu-header {
     font-size: 3rem;
 }
 
-.menu-header {
-    padding-bottom: 20px;
-}
-
+/*reduces font size of address in home tab, underlined as well*/
 #address {
     font-size: 1rem;
     text-decoration: underline;
 }
 
-
+/*aligns text in center for following heading tabs*/
 #heading, #hours, #header-reviews, .menu-header {
     text-align: center;
 }
@@ -95,55 +91,56 @@ nav {
     margin-bottom: 50px;
 }
 
+/*adds spacing between header and social media buttons on contact tab*/
 #followUs {
     margin-bottom: 70px;
 }
 
-
+/*adds spacing between days in operating hours of home tab*/
 #hours-schedule {
     line-height: 45px;
 }
 
+/*styling for the quotes of food reviewers */
 .author-quote {
     padding-left: 20px;
     margin-top: 30px;
     line-height: 40px;
 }
-
-
+/*styling for the author names, reduced font size and added left padding */
 .author-reviews {
     padding-left: 50px;
     font-size: 1.25rem;
 }
-
+/*adds left padding to contact tab*/
 #contact-form, #followDiv {
     padding-left: 40px;
 }
-
+/*adds line spacing between lines in contact us tab*/
 label {
    line-height: 70px;
 }
-
+/*adds a pointer cursor to buttons and removes default styling of button to match div background*/
 .social-btn {
     background-color: #66b2b2;
     border: none;
     cursor: pointer;
 }
-
+/*spaces all buttons evenly throughout contact tab*/
 #buttonDiv {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 30px;
     text-align: center;
 }
-
+/*button styling to have name of social media app and button in a column*/
 button {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     font-family: 'Skeleton';
 }
-
+/*div to place food item name and price in space line*/
 .nameCostDiv {
     display: flex;
     justify-content: space-between;
@@ -151,20 +148,20 @@ button {
     padding-right: 10px;
     padding-top: 20px;
 }
-
+/*styling for images of food in menu*/
 .menuImage {
     margin-left: auto;
     margin-right: auto;
     display: block;
     border: 1px solid black;
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
-
+/*styling for description of food in menu*/
 .menuDesc {
     margin-bottom: 50px;
     font-size: 1.5rem;
-    padding-left: 10px;
     line-height: 40px;
+    text-align: center;
 }
