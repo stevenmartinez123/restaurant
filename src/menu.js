@@ -1,9 +1,9 @@
+//imported images to display with food items
 import taco from "../src/images/taco.jpg";
 import burrito from "../src/images/burrito.jpg";
 import enchilada from "../src/images/enchilada.jpg";
 import tamale from "../src/images/tamale.jpg";
 import soda from "../src/images/soda.jpg";
-import water from "../src/images/water.jpg";
 import beer from "../src/images/beer.jpg";
 import horchata from "../src/images/horchata.jpg";
 import flan from "../src/images/flan.jpg";
@@ -20,7 +20,7 @@ export default function menu() {
    //array for menu items
     const menuHeadings = ['Menu', 'Entrees', 'Drinks', 'Desserts'];
 
-    //populate divs in menu
+    //populate divs in menu for each heading in menuHeadings array
     let index = 0
     menuHeadings.forEach(item => {
         let headerDiv = document.createElement('div');
@@ -29,13 +29,11 @@ export default function menu() {
         heading.className = 'menu-header';
         heading.textContent = item;
         headerDiv.append(heading);
-        if (index >= 1) {
+        if (index >= 1) { //skips menu and iterates items starting at entrees
             let menuItems = populateMenuItems(index);
             headerDiv.append(menuItems);
-            menuContainer.append(headerDiv);
-        } else {
-            menuContainer.append(headerDiv);
         }
+        menuContainer.append(headerDiv);
         index++;
     });
 
@@ -44,9 +42,9 @@ export default function menu() {
 }
 
 function populateMenuItems(index) {
-
+    //food div to append to menuHeader div
     let foodDiv = document.createElement('div');
-
+    
     const entreeItems = [
         menuItem('Taco', 'Chicken, Al Pastor, Asada, or Carnitas', '$1.99', taco),
         menuItem('Burrito (Wet or Dry) ', 'Beans, Cheese, Rice, Pico de Gallo, Salsa, '
@@ -68,6 +66,7 @@ function populateMenuItems(index) {
         menuItem('Churro', 'Stick shaped fried bread with a hefty amount of cinnamon', '$1.00', churro)
     ];
 
+    //populates divs with the correct menu product
     if (index == 1) {
         createFoodDiv(entreeItems);
     } else if (index == 2) {
@@ -76,24 +75,30 @@ function populateMenuItems(index) {
         createFoodDiv(dessertItems);
     }
 
+    //for each food item in array creates its text content and appends to a div
     function createFoodDiv(array) {
         array.forEach(item =>{
             let nameCostDiv = document.createElement('div');
             nameCostDiv.className = 'nameCostDiv';
+            //name of item
             let name = document.createElement('h1');
             name.className = 'menuItem';
             name.textContent = item.itemName;
+            //description of item
             let desc = document.createElement('p');
             desc.className = 'menuDesc';
             desc.textContent = item.itemDescription;
+            //cost of item
             let cost = document.createElement('h3');
             cost.textContent = item.itemPrice;
             cost.className = 'menuItem';
             let image = new Image();
+            //photo of item
             image.className = 'menuImage';
             image.src = item.itemPhoto;
             image.width='250';
             image.height='250';
+
             nameCostDiv.append(name, cost);
             foodDiv.append(nameCostDiv, image, desc);
         }); 
@@ -103,7 +108,7 @@ function populateMenuItems(index) {
     return foodDiv;
 }
 
-//function to create menu items
+//menu item object to create menu items
 var menuItem = (itemName, itemDescription, itemPrice, itemPhoto) => {
     return {
         itemName,
