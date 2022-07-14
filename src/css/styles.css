@@ -1,3 +1,170 @@
+@font-face {
+    font-family: 'Skeleton';
+    src: url('../fonts/ElSkeleto-ZVEGx.otf');
+}
+
+
+ul {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+:root {
+    background-image: url("../images/skull-background.jpg");
+    background-repeat: repeat;
+    font-family: 'Skeleton';
+}
+
 body {
-    background-color: teal;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #66b2b2;
+    position: sticky;
+    top: 0;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
+}
+
+.tab {
+    cursor: pointer;
+    padding-right: 20px;
+    font-size: 1.5rem;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contentContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    font-size: 2rem;
+}
+
+.home, #contact-form, .menu, #followDiv {
+    background-color: #66b2b2;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 4px solid orange;
+}
+
+#contact-form {
+    background-color: #66b2b2;
+}
+
+#header-hours {
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#header-reviews, .menuItem {
+    font-size: 2.5rem;
+}
+
+#header-home, #reviews-header, .menu-header {
+    font-size: 3rem;
+}
+
+.menu-header {
+    padding-bottom: 20px;
+}
+
+#address {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+
+#heading, #hours, #header-reviews, .menu-header {
+    text-align: center;
+}
+
+#contact-header, #followUs {
+    margin-top: 20px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+#followUs {
+    margin-bottom: 70px;
+}
+
+
+#hours-schedule {
+    line-height: 45px;
+}
+
+.author-quote {
+    padding-left: 20px;
+    margin-top: 30px;
+    line-height: 40px;
+}
+
+
+.author-reviews {
+    padding-left: 50px;
+    font-size: 1.25rem;
+}
+
+#contact-form, #followDiv {
+    padding-left: 40px;
+}
+
+label {
+   line-height: 70px;
+}
+
+.social-btn {
+    background-color: #66b2b2;
+    border: none;
+    cursor: pointer;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family: 'Skeleton';
+}
+
+.nameCostDiv {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+.menuImage {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.menuDesc {
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    line-height: 40px;
 }
